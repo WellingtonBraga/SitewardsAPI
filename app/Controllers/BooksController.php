@@ -157,7 +157,7 @@ class BooksController
      */
     public function changeHolder(Request $request, Response $response, array $args) {
         $id = $args["id"];
-        
+
         $mapper = new BookMapper();
 
         $data = $request->getParsedBody();
