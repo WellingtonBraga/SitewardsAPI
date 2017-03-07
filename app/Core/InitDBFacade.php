@@ -7,7 +7,7 @@ namespace App\Core;
 use App\Models\Book;
 use App\Models\Mappers\BookMapper;
 
-class InitializeDatabase
+class InitDBFacade
 {
 
     private $mapper;

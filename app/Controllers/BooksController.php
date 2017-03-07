@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Core\InitializeDatabase;
+use App\Core\InitDBFacade;
 use App\Helpers\TraitConfig;
 use App\Models\Book;
 use App\Models\Mappers\BookMapper;
@@ -17,7 +17,7 @@ class BooksController
         $this->setUpConfiguration();
 
         if ($this->config["initialize"] === true) {
-            $init = new InitializeDatabase();
+            $init = new InitDBFacade();
             $init->start();
         }
     }
