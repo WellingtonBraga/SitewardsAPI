@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Mar-2017 às 05:16
+-- Generation Time: 07-Mar-2017 às 23:57
 -- Versão do servidor: 10.1.13-MariaDB
 -- PHP Version: 7.0.5
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_sitewards`
 --
+CREATE DATABASE IF NOT EXISTS `db_sitewards` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `db_sitewards`;
 
 -- --------------------------------------------------------
 
@@ -53,7 +55,7 @@ ALTER TABLE `books`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
