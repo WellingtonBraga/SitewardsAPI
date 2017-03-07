@@ -157,14 +157,20 @@ class BooksController
      */
     public function changeHolder(Request $request, Response $response, array $args) {
         $id = $args["id"];
+        
+        $mapper = new BookMapper();
 
         $data = $request->getParsedBody();
-        $mapper = new BookMapper();
+        // If this keys doesn't exists, it means that we are receiving
+        // an json with the information, so we need to parse it in order to retrieve this information
+        // and convert it to array
+        if (!isset($data["name"])) {
+            $data = json_decode(array_keys($data)[0], true);
+        }
 
         $holder = $data["name"];
 
         $book = $mapper->changeHolder($holder, $id);
-
         if (is_null($book) || is_int($book)) {
             return $response->withStatus($book);
         }
