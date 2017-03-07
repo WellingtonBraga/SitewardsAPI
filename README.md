@@ -46,12 +46,12 @@ file.
 Method | Pattern | Purpose | URL Params | Data Params
 -------|---------|---------|------------|-------------
 GET | /books | Return the full book's list. | - | -
-GET | /books/name/{name} | Return only one book based in its name | name=[string] | -
-GET | /books/author/{author} | Return all books from an specified author | author=[string] | -
-GET | /books/holder/{holder} | Return all books which are with an specified holder (who belongs it now)  | holder=[string] | -
-GET | /books/{id} | Return only one book based in its id  | id=[int] | -
-POST | /books | Add a new book  | - | {"name":"Programming Pearls","isbn13":"978-0201657883","isbn10":"0201657880","author":"Jon Bentley","location":"Wellington"}
-PUT | /books/{id} | Change the holder of an specified book  | id=[int] | {"name":"Anton"}
+GET | /books/name/{name} | Return only one book based in its name. | name=[string] | -
+GET | /books/author/{author} | Return all books from an specified author. | author=[string] | -
+GET | /books/holder/{holder} | Return all books which are with an specified holder (who belongs it now).  | holder=[string] | -
+GET | /books/{id} | Return only one book based in its id.  | id=[int] | -
+POST | /books | Add a new book.  | - | {"name":"Programming Pearls","isbn13":"978-0201657883","isbn10":"0201657880","author":"Jon Bentley","location":"Wellington"}
+PUT | /books/{id} | Change the holder of an specified book.  | id=[int] | {"name":"Anton"}
 
 
 ## Built With
