@@ -38,6 +38,22 @@ There is data on the database_data.csv file already, so, feel free to look it an
 After that, just initialize the application and the software will retrieve all the information in this file, and
 it is going to persist them on the database.
 
+## Endpoints
+
+Below it is stated each endpoint in this api and its responsability. To see the endpoints declaration go to [index.php](index.php)
+file.
+
+Method | Pattern
+-------|--------
+GET | /books
+GET | /books/name/{name}
+GET | /books/author/{author}
+GET | /books/holder/{holder}
+GET | /books/{id}
+POST | /books
+PUT | /books/{id}
+
+
 ## Built With
 
 * [Slim Framework 3](https://www.slimframework.com/) - A micro framework for PHP
