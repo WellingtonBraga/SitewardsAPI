@@ -47,6 +47,7 @@ class BooksController
         $mapper = new BookMapper();
 
         $data = $request->getParsedBody();
+        $data = json_decode(array_keys($data)[0], true);
 
         $book = new Book();
 
