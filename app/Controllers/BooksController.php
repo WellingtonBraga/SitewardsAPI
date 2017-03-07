@@ -31,6 +31,7 @@ class BooksController
     public function listAllBooks(Request $request, Response $response) {
         $mapper = new BookMapper();
 
+        // Find all books
         $books = $mapper->findAll();
 
         $response->getBody()->write(json_encode($books));
@@ -47,16 +48,23 @@ class BooksController
         $mapper = new BookMapper();
 
         $data = $request->getParsedBody();
-        $data = json_decode(array_keys($data)[0], true);
 
+        // If this two keys doesn't exists, it means that we are receiving
+        // an json with the information, so we need to parse it in order to retrieve those information
+        // and convert them to array
+        if (!isset($data["name"]) && !isset($data["author"])) {
+            $data = json_decode(array_keys($data)[0], true);
+        }
+
+        // Creating new book object
         $book = new Book();
-
         $book->setName($data["name"]);
         $book->setIsbn10($data["isbn10"]);
         $book->setAuthor($data["author"]);
         $book->setIsbn13($data["isbn13"]);
         $book->setLocation($data["location"]);
 
+        // Persist book
         return $response->withStatus($mapper->save($book));
     }
 
