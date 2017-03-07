@@ -18,7 +18,7 @@ composer install
 
 #### database
 
-The application uses MySQL database to persist data. The file db_sitewards.sql is the backup of the database and must to be
+The application uses MySQL database to persist data. The file [db_sitewards.sql](db_sitewards.sql) is the backup of the database and must to be
 restored.
 
 ##### Initialize database
