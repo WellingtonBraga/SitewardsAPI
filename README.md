@@ -1,6 +1,6 @@
-# SitewardsAPI
+# Slim Framework API
 
-This project consists in a PHP Rest API developed for Sitewards.
+This project consists in a PHP Rest API developed in order to help those who needs to start with Slim Framework.
 
 ## Getting Started
 
